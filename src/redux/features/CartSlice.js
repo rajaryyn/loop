@@ -6,7 +6,7 @@ import { toast } from "react-hot-toast";
 
 const initialState = {
   cartState: false,
-  cartItems: localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [],
+  cartItems: [],
   cartTotalAmount: 0,
   cartTotalQty: 0,
 };
@@ -34,10 +34,7 @@ const CartSlice = createSlice({
         toast.success(`${action.payload.name} Added to cart`);
         
       }
-      if (typeof window !== "undefined") {
-        localStorage.setItem("cart", JSON.stringify(state.cartItems));
-        
-      }
+     
     },
 
     setRemoveItemFromCart: (state, action) => {
@@ -45,10 +42,7 @@ const CartSlice = createSlice({
       state.cartItems = state.cartItems.filter((item) => item.id !== id);
       // const removeItem = state.cartItems.filter((item)=> item.id !== action.payload.id);
       // state.cartItems = removeItem
-      if (typeof window !== "undefined") {
-        localStorage.setItem("cart", JSON.stringify(state.cartItems));
-      }
-
+   
       toast.success(`${action.payload.name} Removed from cart`);
     },
     setIncQty: (state, action) => {
@@ -61,9 +55,6 @@ const CartSlice = createSlice({
         toast.success(`item incresed`);
       }
 
-      if (typeof window !== "undefined") {
-        localStorage.setItem("cart", JSON.stringify(state.cartItems));
-      }
     },
     setDecQty: (state, action) => {
       const existingItem = state.cartItems.find(
@@ -75,17 +66,12 @@ const CartSlice = createSlice({
         toast.success(`item DEcresed`);
       }
       
-      if (typeof window !== "undefined") {
-        localStorage.setItem("cart", JSON.stringify(state.cartItems));
-      }
+      
     },
     setClearQty: (state, action) => {
       state.cartItems = [];
       toast.success(`cart cleared`);
-      
-      if (typeof window !== "undefined") {
-        localStorage.setItem("cart", JSON.stringify(state.cartItems));
-      }
+     
     },
 
     setGetTotals: (state, action) => {

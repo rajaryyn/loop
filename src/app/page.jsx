@@ -2,11 +2,8 @@ import Category from "@/components/categorysec/Category";
 import SearchBanner from "@/components/seachbanner/Searchbanner";
 import {
   ProductsData,
-  newata,
-  meat,
   grocery,
-  vegetable,
-  groce,
+
 } from "../../data/products.js";
 import Footer from "@/components/footer/Footer.jsx";
 
