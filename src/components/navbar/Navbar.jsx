@@ -53,8 +53,8 @@ export default function Navbar() {
     <Cart />
       <header className={
         !navState
-          ? "absolute top-3 left-0 right-0 opacity-100 z-200 flex items-center justify-center  "
-          : "fixed top-0 left-0 right-0 h-16 flex items-center justify-center opacity-100 z-[200] blur-effect-theme"
+          ? "absolute top-0 left-0 right-0 opacity-100 z-200 flex items-center justify-center  "
+          : "fixed -top-2 left-0 right-0 h-16 flex items-center justify-center opacity-100 z-[200] blur-effect-theme"
       }>
          <nav className='flex items-center justify-between nike-container'>
             <div className='flex items-center'>

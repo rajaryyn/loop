@@ -34,8 +34,10 @@ const CartSlice = createSlice({
         toast.success(`${action.payload.name} Added to cart`);
         
       }
-
-      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cart", JSON.stringify(state.cartItems));
+        
+      }
     },
 
     setRemoveItemFromCart: (state, action) => {
@@ -43,7 +45,9 @@ const CartSlice = createSlice({
       state.cartItems = state.cartItems.filter((item) => item.id !== id);
       // const removeItem = state.cartItems.filter((item)=> item.id !== action.payload.id);
       // state.cartItems = removeItem
-      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      }
 
       toast.success(`${action.payload.name} Removed from cart`);
     },
@@ -56,7 +60,10 @@ const CartSlice = createSlice({
         existingItem.quantity += 1;
         toast.success(`item incresed`);
       }
-      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      }
     },
     setDecQty: (state, action) => {
       const existingItem = state.cartItems.find(
@@ -67,12 +74,18 @@ const CartSlice = createSlice({
         existingItem.quantity -= 1;
         toast.success(`item DEcresed`);
       }
-      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      }
     },
     setClearQty: (state, action) => {
       state.cartItems = [];
       toast.success(`cart cleared`);
-      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      }
     },
 
     setGetTotals: (state, action) => {
