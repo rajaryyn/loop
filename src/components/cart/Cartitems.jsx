@@ -1,29 +1,41 @@
-'use client'
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { useDispatch } from "react-redux";
-import { setIncQty,setDecQty, setRemoveItemFromCart, setClearQty } from "../../redux/features/CartSlice";
+import {
+  setIncQty,
+  setDecQty,
+  setRemoveItemFromCart,
+  setClearQty,
+} from "../../redux/features/CartSlice";
 
 function Cartitems({ product }) {
   // reduxx
-const dispatch = useDispatch()
-const onRemoveItem = () =>{
-  dispatch(setRemoveItemFromCart(product))
+  const dispatch = useDispatch()
 
-}
+  const onRemoveItem = () => {
+    dispatch(setRemoveItemFromCart(product));
+  };
 
-const handleIncCart = ()=>{
-  dispatch(setIncQty(product))
-}
-const handleDecCart = ()=>{
-  dispatch(setDecQty(product))
+  const handleIncCart = () => {
+    dispatch(setIncQty(product));
+  };
+  const handleDecCart = () => {
+    dispatch(setDecQty(product));
+  };
+  const handleClearCart = () => {
+    dispatch(setClearQty());
+  }
 
-}
-const handleClearCart = ()=>{
-  dispatch(setClearQty())
+  useEffect(() => {
+    if (product.quantity === 0) {
+      dispatch(setRemoveItemFromCart(product));
+    }
+  }, [product.quantity, dispatch]);
 
-}
+
+
 
   return (
     <>
@@ -61,10 +73,16 @@ const handleClearCart = ()=>{
         </div>
         <div className="grid items-center gap-5">
           <div className="grid items-center justify-center">
-            <h1 className="text-lg lg:text-base text-slate-900 font-medium">₹ {product.price * product.quantity}</h1>
+            <h1 className="text-lg lg:text-base text-slate-900 font-medium">
+              ₹ {product.price * product.quantity}
+            </h1>
           </div>
           <div className="grid items-center justify-center">
-            <button type="button" className="cursor-pointer" onClick={onRemoveItem}>
+            <button
+              type="button"
+              className="cursor-pointer"
+              onClick={onRemoveItem}
+            >
               <TrashIcon className="w-5 h-5" />
             </button>
           </div>
@@ -75,5 +93,3 @@ const handleClearCart = ()=>{
 }
 
 export default Cartitems;
-
-

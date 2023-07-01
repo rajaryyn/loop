@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar.jsx";
 import ReduxProvider from "../redux/provider";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from '@vercel/analytics/react';
+ 
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
           <Toaster position="bottom-center" reverseOrder={false} />
           <Navbar />
           {children}
+          <Analytics />
         </ReduxProvider>
       </body>
     </html>

@@ -1,5 +1,7 @@
+
 import Category from "@/components/categorysec/Category";
 import SearchBanner from "@/components/seachbanner/Searchbanner";
+import Location from "@/components/location/Location.jsx";
 import {
   ProductsData,
   grocery,
@@ -17,6 +19,8 @@ export default function Home() {
         <Category pro={ProductsData} heading={"Grocery"} list={grocery} />
         <Category pro={ProductsData} heading={"Grocery"} list={grocery} />
         <Category pro={ProductsData} heading={"Grocery"} list={grocery} />
+        <Location />
+    
         <Footer />
       </div>
     </>
