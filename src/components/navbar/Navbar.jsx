@@ -9,6 +9,7 @@ import { Button } from "@mui/material";
 import { useDispatch } from 'react-redux';
 import { setOpenCart } from '@/redux/features/CartSlice';
 import Cart from '../cart/Cart';
+import Link from 'next/link';
 
 
 export default function Navbar() {
@@ -53,12 +54,13 @@ export default function Navbar() {
     <Cart />
       <header className={
         !navState
-          ? "absolute -top-1 left-0 right-0 opacity-100 z-200 flex items-center justify-center  "
+          ? "absolute top-0 left-0 right-0 opacity-100 z-200 flex items-center justify-center"
           : "fixed -top-1 left-0 right-0 h-16 flex items-center justify-center opacity-100 z-[200] blur-effect-theme"
       }>
          <nav className='flex items-center justify-between nike-container'>
             <div className='flex items-center'>
                <Image src="/logo1.png" alt="logo" width={75} height={5}  />
+              
             </div>
             <ul className='flex items-center justify-center gap-2'>
                <li className='grid items-center'><MagnifyingGlassIcon className='icon-style' /></li>
@@ -69,7 +71,7 @@ export default function Navbar() {
             
               
             ><ShoppingCartIcon className='icon-style' /></button></li>
-               <li className='grid items-center'><Button>Login</Button></li>
+               <li className='grid items-center'><Link href='/login'> <Button>Login</Button></Link></li>
             </ul>
          </nav>
       </header>

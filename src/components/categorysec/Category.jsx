@@ -2,8 +2,7 @@
 import { useDispatch } from "react-redux";
 
 import React from "react";
-import Image from "next/image";
-// import { useDispatch } from "react-redux";
+import Image from "next/image";''
 import "./category.css";
 import { ProductsData } from "../../../data/products.js";
 import { useState } from "react";
@@ -28,7 +27,7 @@ export default function Category({ pro, heading, list }) {
 
   return (
     <div className="container">
-      <h1>{heading}</h1>
+      <h1 className="text-2xl font-semibold tracking-tight underline decoration-2 underline-offset-4">{heading}</h1>
       <div className="products">
         <ul className="menu">
           <li onClick={() => setMenuProducts(pro)} className="all">
@@ -39,26 +38,16 @@ export default function Category({ pro, heading, list }) {
               {category.label}
             </li>
           ))}
-          {/* <li onClick={() => filter("skin care")} className="all">
-            Atta
-          </li>
-          <li onClick={() => filter("conditioner")} className="all">
-            Rice
-          </li>
-          <li onClick={() => filter("foundation")} className="all">
-            Oils
-          </li>
-          <li onClick={() => filter("foundation")} className="all">
-            Dals
-          </li> */}
+    
         </ul>
 
         <div className="list">
+          
           {MenuProducts.map((product, i) => (
             <div className="product" key={product.id}>
               <div className="left-s">
                 <div className="name" >
-                  <span className="">{product.name}</span>
+                  <span className="text-sm font-semibold">{product.name}</span>
                   <span>{product.quantity}</span>
                 </div>
                 <span className="absolute bottom-1 ">₹ {product.price}</span>
@@ -71,13 +60,15 @@ export default function Category({ pro, heading, list }) {
                   type="button"
                   className="active:scale-110 transition-all duration-300 relative"
                   onClick={() => AddToCart(product)}
-                >
+                  >
                   <PlusCircleIcon className="icon-style" />
                 </button>
               </span>
             </div>
           ))}
         </div>
+          
+        
       </div>
     </div>
   );

@@ -6,17 +6,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
+}
 
-  
-}
-.container>h1{
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  
-  /* font-weight: bolder; */
-  
-}
 
 
 
@@ -98,10 +90,10 @@
 
 
 
-.name > :nth-child(1) {
+/* .name > :nth-child(1) {
   font-size: 1rem;
   font-weight: 600;
-}
+} */
 
 .name > :nth-child(2) {
   font-size: 0.7rem;

@@ -230,21 +230,23 @@ export const hey = [{
 ]
 
 export const grocery=[
-    { label: "Atta", type: "skin care" },
-    { label: "Rice", type: "conditioner" },
-    { label: "Oils", type: "foundation" },
-    { label: "Dals", type: "foundation" },
+    { label: "Atta", type: "atta" },
+    { label: "Rice", type: "rice" },
+    { label: "Oils", type: "oil" },
+    { label: "Dals", type: "dals" },
   ]
 
   export const vegetable=[
-    { label: "aditya", type: "skin care" },
-    { label: "aryan", type: "conditioner" },
-    { label: "abhishek", type: "foundation" },
-    { label: "raj", type: "foundation" },
+    { label: "Vegetables", type: "vegetables" },
+    { label: "Fruits", type: "fruits" },
   ]
 
+  export const masala=[
+    { label: "Powder Spices", type: "vegetables" },
+    { label: "Raw spices", type: "conditioner" },
+  ]
 
-  export const meat=[
+ export const meat=[
     { label: "ayoyo", type: "skin care" },
     { label: "solo", type: "conditioner" },
     { label: "agdgshek", type: "foundation" },

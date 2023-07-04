@@ -9,8 +9,8 @@ import Image from "next/image";
 function Footer() {
   return (
     <>
-      <div className="bg-gray-50 h-1/2 mt-10 w-full flex md:flex-row justify-around items-start p-20 sm:flex-col">
-        <div className="p-5">
+      <div className="bg-gray-50 h-1/2 mt-10 w-full flex md:flex-row justify-around items-start p-1 sm:flex-col">
+        {/* <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-2xl pb-4">Product</p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
@@ -26,8 +26,8 @@ function Footer() {
               Fixed deposits
             </li>
           </ul>
-        </div>
-        <div className="p-5">
+        </div> */}
+        {/* <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-2xl pb-4">Company</p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
@@ -46,8 +46,8 @@ function Footer() {
               Press & Media
             </li>
           </ul>
-        </div>
-        <div className="p-5">
+        </div> */}
+        {/* <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-2xl pb-4">Support</p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
@@ -66,9 +66,9 @@ function Footer() {
               Videos
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
-      <div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
+      <div className="flex flex-col justify-center items-center text-center  p-4 bg-gray-50">
               <Image src="/logo1.png" width={96} height={5} alt="logo" />
           <div className=" ">
             <ul>
@@ -81,10 +81,7 @@ function Footer() {
             </ul>
           </div>
         <h1 className=" text-gray-800 font-semibold">
-          © 2021-2022 All rights reserved 
-          <span className="hover:text-blue-600 font-semibold cursor-pointer">
-            streamline{" "}
-          </span>
+          © 2021-2023 All rights reserved 
         </h1>
       </div>
     </>

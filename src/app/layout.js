@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/navbar/Navbar.jsx";
 import ReduxProvider from "../redux/provider";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from '@vercel/analytics/react';
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ReduxProvider>
           <Toaster position="bottom-center" reverseOrder={false} />
-          <Navbar />
           {children}
           <Analytics />
         </ReduxProvider>
