@@ -1,5 +1,5 @@
-import img1 from '../public/img1.png'
-import img2 from '../public/img2.png'
+import img1 from '../public/atta.png'
+import img2 from '../public/fo.png'
 import img3 from '../public/img3.png'
 import img4 from '../public/img4.png'
 import img5 from '../public/img5.png'
@@ -25,7 +25,7 @@ export const SliderProducts = [{
     name: 'SKIN',
     detail: 'Super Skin Care',
     price: '30',
-    img: img2
+    img: img1
 },
 {
     id:3,
@@ -51,7 +51,7 @@ export const ProductsData = [{
     name: 'NATURE',
     detail: 'Super Skin Care',
     price: '25',
-    img: img3,
+    img: img2,
     type: 'skin care',
 },
 {

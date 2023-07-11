@@ -53,6 +53,7 @@ export default function Cart() {
             ? "opacity-100 visible translate-x-0"
             : "opacity-0 invisible translate-x-7"
         }`}
+
       >
         <div
           className={`

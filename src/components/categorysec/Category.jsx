@@ -47,15 +47,15 @@ export default function Category({ pro, heading, list }) {
             <div className="product" key={product.id}>
               <div className="left-s">
                 <div className="name" >
-                  <span className="text-sm font-semibold">{product.name}</span>
+                  <span className="text-sm font-semibold ">{product.name}</span>
                   <span>{product.quantity}</span>
                 </div>
-                <span className="absolute bottom-1 ">₹ {product.price}</span>
+                <span className="absolute -bottom-6 ">₹ {product.price}</span>
               </div>
-
-              <Image
-               src={product.img} alt="" className="img-p" />
-              <span className="absolute bottom-0 right-2 ">
+              
+  <Image
+               src={product.img} alt="" className="img-p " /> 
+              <span className="absolute -bottom-7 right-2 ">
                 <button
                   type="button"
                   className="active:scale-110 transition-all duration-300 relative"
@@ -73,3 +73,11 @@ export default function Category({ pro, heading, list }) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
