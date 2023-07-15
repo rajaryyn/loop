@@ -15,7 +15,7 @@
 .products {
   display: grid;
   width: 90%;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 20% auto;
 }
 
 .menu {
@@ -46,10 +46,10 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   height: 25rem;
   overflow-y: scroll;
-  gap: 2rem;
+  /* gap: 2rem; */
   justify-content: space-between;
 }
 
@@ -82,10 +82,10 @@
 .img-p{
   /* transform: rotate(-20deg); */
   position: absolute;
-  right: 25%;
-  width: 50%;
-  height: 75%;
-  bottom: 2%;
+  right: 28%;
+  width: 45%;
+  height: 65%;
+  bottom: 5%;
 
 }
 
@@ -118,6 +118,11 @@
     
   }
 
+  .products{
+    width: 95%;
+    grid-template-columns: 28% auto;
+  }
+
   .product{
     left: 5rem;
   }
@@ -130,7 +135,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: 0rem;
+    left: 1rem;
     
 
   }

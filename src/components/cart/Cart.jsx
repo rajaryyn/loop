@@ -73,9 +73,7 @@ export default function Cart() {
           <Cartcount onCartToggle={onCartToggle} />
 
           
-        {checkoutClicked ? (
-          <Adress area={'Choose Your Address'} />
-        ) : (
+      
           <>
 
           {cartItems?.length === 0 ? (
@@ -106,7 +104,9 @@ export default function Cart() {
                   </p>
 
                   <button className="button-theme bg-theme-cart text-white" onClick={() => setCheckoutClicked(true)}>
+                    <Link href='/checkout'>
                     checkout
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function Cart() {
           )}
                   
                 </>
-              )}
+            
           
         </div>
       </div>
