@@ -10,6 +10,7 @@ import Footer from "@/components/footer/Footer.jsx";
 import Title from "@/components/title/Title.jsx";
 import { Atta } from "../../data/atta.js";
 import Navbar from "@/components/navbar/Navbar.jsx";
+import { Button } from "@/components/ui/Button.jsx";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
         <Category pro={ProductsData} heading={"Dairy & Bread "} list={grocery} />
         <Category pro={ProductsData} heading={"Biscuits "} list={grocery} />
         <Footer />
+        <Button variant="outline">hello</Button>
         
         
       </div>

@@ -119,8 +119,8 @@
   }
 
   .products{
-    width: 95%;
-    grid-template-columns: 28% auto;
+    width: 90%;
+    grid-template-columns: 50% auto;
   }
 
   .product{

@@ -15,7 +15,7 @@ import img14 from '../public/img14.png'
 
 export const SliderProducts = [{
     id:1,
-    name: 'SKIN',
+    name: 'Ashirbad',
     detail: 'Super Skin Care',
     price: '25',
     img: img1
@@ -39,7 +39,7 @@ export const SliderProducts = [{
 export const ProductsData = [{
     id:1,
     
-    name: 'SKIN',
+    name: 'Ashirbad Atta',
     detail: 'Super Skin Care',
     price: '25',
     img: img1,

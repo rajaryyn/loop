@@ -36,8 +36,8 @@ function Cartitems({ product }) {
 
   return (
     <>
-      <div className="flex items-center justify-between w-full px-5 py-3 ">
-        <div className="flex  gap-3">
+      <div className="flex items-center justify-between w-full px-5 py-3 border  rounded-md mb-3  shadow-lg ">
+        <div className="flex gap-3">
           <div className="relative hover:scale-105 bg-gray-100 p-3 rounded-xl transition-all duration-75 ease-in-out items-center shrink-0">
             <Image src={product.img} className="w-16 h-16" alt="img" />
           </div>
@@ -47,7 +47,7 @@ function Cartitems({ product }) {
               <div className="flex"> ₹{product.price * product.quantity}</div>
             </div>
             <div className="flex">
-              <div className="flex ml-40 ">
+              <div className="flex ml-28 sm:ml-36 ">
                 <button
                   type="button"
                   className="w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90"
@@ -66,7 +66,7 @@ function Cartitems({ product }) {
                   <PlusIcon className="w-5 h-5 lg:w-4 lg:h-4 stroke-[2]" />
                 </button>
               </div>
-              <div className="  ml-20">
+              <div className="  ml-4 sm:ml-20">
                 <button
                   type="button"
                   className="cursor-pointer"

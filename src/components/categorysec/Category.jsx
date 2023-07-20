@@ -25,7 +25,7 @@ export default function Category({ pro, heading, list }) {
 
   return (
     <div className="container">
-      <h1 className="text-2xl font-semibold tracking-tight underline decoration-2 underline-offset-4">
+      <h1 className="text-2xl font-semibold ">
         {heading}
       </h1>
       <div className="products">
@@ -46,12 +46,12 @@ export default function Category({ pro, heading, list }) {
 
         <div className="list gap-y-4 gap-x-2 scroll-smooth scroll-hidden ">
           {MenuProducts.map((product, i) => (
-            <div className="w-36 key={product.id}">
-              <div className="bg-slate-100 p-5 rounded-2xl">
-                <Image src={product.img} alt="" className="  w-28 h-24" />
+            <div className="w-36 key={product.id} rounded-xl border p-2 space-y-4   shadow-xl ">
+              <div className="bg-slate-100 p-4 rounded-2xl">
+                <Image src={product.img} alt="" className=" w-28 h-24" />
               </div>
-              <div className="mt-2">
-                <h3 className="font-bold text-lg leading-5">{product.name}</h3>
+              <div className="">
+                <h3 className="font-semibold text-lg leading-5">{product.name}</h3>
               </div>
               <p>{product.quantity}</p>
               <div className="flex mt-1">
@@ -92,3 +92,4 @@ export default function Category({ pro, heading, list }) {
     </div>
   );
 }
+// #ECF3E3   #4EE301
