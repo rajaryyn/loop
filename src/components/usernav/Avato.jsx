@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/Dropdown";
 
-export function Avatar() {
+export function Avato() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

@@ -11,10 +11,9 @@ import { selectTotalAmount, selectTotalQuantity, setOpenCart } from "@/redux/fea
 import Cart from "../cart/Cart";
 import Link from "next/link";
 import Location from "../location/Location";
-import { Avatar } from "../usernav/Avator";
-import { ShoppingBag } from "lucide-react";
-import CartCard from "../Carttotals/CartCard";
+import {  Avato } from "../usernav/Avato";
 
+import CartCard from "../Carttotals/CartCard";
 export default function Navbar() {
 
   const totalAmount = useSelector(selectTotalAmount);
@@ -81,7 +80,7 @@ export default function Navbar() {
               </Link>{" "}
             </li>
             <li className="grid items-center">
-              <Avatar />
+              <Avato />
             </li>
           </ul>
         </nav>
