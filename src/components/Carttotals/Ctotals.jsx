@@ -1,6 +1,5 @@
 import React from "react";
 import { selectTotalAmount } from "@/redux/features/CartSlice";
-import React from "react";
 import { useSelector } from "react-redux";
 import { ShoppingBag } from "lucide-react";
 
