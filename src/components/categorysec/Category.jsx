@@ -46,12 +46,12 @@ export default function Category({ pro, heading, list }) {
 
         <div className="list gap-y-4 gap-x-2 scroll-smooth scroll-hidden ">
           {MenuProducts.map((product, i) => (
-            <div className="w-36 key={product.id} rounded-xl border p-2 space-y-4   shadow-xl ">
+            <div className="w-36 key={product.id} rounded-xl border p-2 space-y-3   shadow-xl ">
               <div className="bg-slate-100 p-4 rounded-2xl">
                 <Image src={product.img} alt="" className=" w-28 h-24" />
               </div>
               <div className="">
-                <h3 className="font-semibold text-lg leading-5">{product.name}</h3>
+                <h3 className="font-semibold text-md leading-5">{product.name}</h3>
               </div>
               <p>{product.quantity}</p>
               <div className="flex mt-1">

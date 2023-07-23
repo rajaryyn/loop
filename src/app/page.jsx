@@ -11,6 +11,8 @@ import Title from "@/components/title/Title.jsx";
 import { Atta } from "../../data/atta.js";
 import Navbar from "@/components/navbar/Navbar.jsx";
 import { Button } from "@/components/ui/Button.jsx";
+import { Input } from "@/components/ui/Input.jsx";
+
 
 
 export default function Home() {
@@ -20,11 +22,11 @@ export default function Home() {
     <>
       <div>
         <Navbar />
-        <div className="mt-20">
+      
           <SearchBanner />
-        </div>
+        
         <Title title={'Our Featured Categories'}/>
-        <Category pro={ProductsData} heading={"Atta, Rice, Oil & Dals"} list={grocery} />
+       <Category pro={ProductsData} heading={"Atta, Rice, Oil & Dals"} list={grocery} />
         <Category pro={ProductsData} heading={"Masala & More"} list={grocery} />
         <Category pro={ProductsData} heading={"Cold Drinks & Juices"} list={grocery} />
         <Category pro={ProductsData} heading={"Snacks "} list={grocery} />
@@ -33,7 +35,6 @@ export default function Home() {
         <Category pro={ProductsData} heading={"Biscuits "} list={grocery} />
         <Footer />
         <Button variant="outline">hello</Button>
-        
         
       </div>
     </>

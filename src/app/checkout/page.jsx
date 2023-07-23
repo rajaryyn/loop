@@ -1,6 +1,6 @@
 "use client";
 import Cartempty from "@/components/cart/Cartempty";
-
+import Link from "next/link";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -14,6 +14,8 @@ import Title from "@/components/title/Title";
 import Cartcount from "@/components/cart/Cartcount";
 import Adress from "@/components/adress/Adress";
 import Payment from "@/components/payment/Payment";
+import { Button } from "@/components/ui/Button";
+import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 
 export default function page() {
   const dispatch = useDispatch();
@@ -35,9 +37,18 @@ export default function page() {
         <Cartempty />
       ) : (
         <>
-          <Cartcount />
-          <div className=" md:flex md:mt-12 md:ml-[20%] md:mr-[20%] md:gap-3 ">
-            <div className="overflow-scroll scroll-smooth scroll-hidden   h-2/3 sm:h-96 ">
+          <div className="px-4 pt-16 pb-5 sm:ml-[20%] sm:px-6 lg:px-8">
+            <div className="flex gap-3">
+              <Link href='/'>
+              <Button variant="outline" size="icon">
+                <ChevronLeftIcon className="h-4 w-4" />
+              </Button>
+              </Link>
+              <h1 className="text-3xl font-bold text-black ">Shopping Cart</h1>
+            </div>
+          </div>
+          <div className=" md:flex  md:ml-[20%] md:mr-[20%] md:gap-3 ">
+            <div className="overflow-scroll scroll-smooth scroll-hidden h-96 ">
               <div className=" ">
                 {cartItems?.map((product, i) => (
                   <Cartitems key={i} product={product} />
@@ -45,7 +56,7 @@ export default function page() {
               </div>
             </div>
             <div className="flex flex-col gap-5   ">
-              <div className=" bg-slate-100 w-full md:static  h-48 md:w-96 px-5 py-2 grid items-center  md:rounded-lg">
+              <div className=" bg-slate-100 w-full md:static shadow-sm h-48 md:w-96 px-5 py-2 grid items-center  md:rounded-lg">
                 <div className="flex items-center justify-between">
                   <h1 className="text-base font-semibold text-gray-400 my-2">
                     Total Items:
@@ -68,10 +79,10 @@ export default function page() {
                   <h1 className="text-base font-semibold text-gray-400 my-2">
                     Total:
                   </h1>
-                  <h1 className="font-semibold">{total}</h1>
+                  <h1 className="font-semibold">₹{total}</h1>
                 </div>
               </div>
-                <Payment />
+              <Payment />
             </div>
           </div>
         </>

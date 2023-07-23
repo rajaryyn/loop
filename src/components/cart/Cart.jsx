@@ -77,7 +77,7 @@ export default function Cart() {
           <>
 
           {cartItems?.length === 0 ? (
-            <Cartempty />
+            <Cartempty  />
             ) : (
               <div>
               <div className=" flex items-start justify-start  flex-col gap-y-7 lg:gap-y-5  overflow-y-scroll  [81vh] scroll-smooth  scroll-hidden  py-3" >

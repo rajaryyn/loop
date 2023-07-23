@@ -31,7 +31,7 @@ const CartSlice = createSlice({
         toast.success(`item incresed`);
       } else {
         state.cartItems.push({ ...action.payload, quantity: 1 });
-        toast.success(`${action.payload.name} Added to cart`);
+        toast.success(`${action.payload.name} "added to cart"`);
         
       }
      
@@ -43,7 +43,7 @@ const CartSlice = createSlice({
       // const removeItem = state.cartItems.filter((item)=> item.id !== action.payload.id);
       // state.cartItems = removeItem
    
-      toast.success(`${action.payload.name} Removed from cart`);
+      toast.success(`${action.payload.name} "removed from cart"`);
     },
     setIncQty: (state, action) => {
       const existingItem = state.cartItems.find(
@@ -52,7 +52,7 @@ const CartSlice = createSlice({
 
       if (existingItem) {
         existingItem.quantity += 1;
-        toast.success(`item incresed`);
+        toast.success(`"item incresed"`);
       }
 
     },
@@ -63,14 +63,14 @@ const CartSlice = createSlice({
 
       if (existingItem) {
         existingItem.quantity -= 1;
-        toast.success(`item DEcresed`);
+        toast.success(`"item decresed"`);
       }
       
       
     },
     setClearQty: (state, action) => {
       state.cartItems = [];
-      toast.success(`cart cleared`);
+      toast.success(`"cart cleared"`);
      
     },
 
