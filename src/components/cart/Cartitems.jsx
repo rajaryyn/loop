@@ -41,7 +41,7 @@ function Cartitems({ product }) {
           <div className="relative hover:scale-105 bg-gray-100 p-3 rounded-xl transition-all duration-75 ease-in-out items-center shrink-0">
             <Image src={product.img} className="w-16 h-16" alt="img" />
           </div>
-          <div className="font-bold text-lg text-slate-900 ">
+          <div className="font-bol text-slate-900 ">
             <h3>{product.name}</h3>
             <div className="mt-1 flex">
               <div className="flex"> ₹{product.price * product.quantity}</div>

@@ -120,7 +120,7 @@
 
   .products{
     width: 90%;
-    grid-template-columns: 26% auto;
+    grid-template-columns: 30% auto;
   
   }
 
