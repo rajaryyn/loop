@@ -1,66 +1,88 @@
+"use client";
 import React from "react";
 import { Input } from "../ui/Input";
 import * as Label from "@radix-ui/react-label";
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 
 export default function Adress() {
+  const form = useForm();
+  const { register, control, handleSubmit } = form;
+  const onsubmit = (data) => {
+    console.log("submit",data);
+  };
   return (
     <>
-      <div className="grid gap-4 py-4">
+      <form className="grid gap-4 py-4" onSubmit={handleSubmit(onsubmit)}>
         <div className="grid grid-cols-4 items-center gap-4">
           <Label.Root
             className="text-[15px] font-medium leading-[35px] text-black   text-center"
-            htmlFor="firstName"
+            htmlFor="name"
           >
             Name
           </Label.Root>
-          <Input id="name" className="col-span-3" />
+          <Input id="name" className="col-span-3" {...register("name")} />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
           <Label.Root
             className="text-[15px] font-medium leading-[35px] text-black   text-center"
-            htmlFor="firstName"
+            htmlFor="phone"
           >
             Phone no.
           </Label.Root>
-          <Input className="col-span-3" />
+          <Input id="phone" className="col-span-3" {...register("phone")} />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
           <Label.Root
             className="text-[15px] font-medium leading-[35px] text-black   text-center"
-            htmlFor="firstName"
+            htmlFor="address"
           >
             Address
           </Label.Root>
-          <Input className="col-span-3" />
+          <Input id="address" className="col-span-3" {...register("address")} />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
           <Label.Root
             className="text-[15px] font-medium leading-[35px] text-black   text-center"
-            htmlFor="firstName"
+            htmlFor="code"
           >
             Pin Code
           </Label.Root>
-          <Input className="col-span-3" />
+          <Input id="code" className="col-span-3" {...register("code")} />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
           <Label.Root
             className="text-[15px] font-medium leading-[35px] text-black   text-center"
-            htmlFor="firstName"
+            htmlFor="city"
           >
             City
           </Label.Root>
-          <Input className="col-span-3" value="Gaya" />
+          <Input
+            id="city"
+            className="col-span-3"
+            value="Gaya"
+            {...register("city")}
+          />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
           <Label.Root
             className="text-[15px] font-medium leading-[35px] text-black   text-center"
-            htmlFor="firstName"
+            htmlFor="state"
           >
             State
           </Label.Root>
-          <Input className="col-span-3" value="Bihar" />
+          <Input
+            id="state"
+            className="col-span-3"
+            value="Bihar"
+            {...register("state")}
+          />
         </div>
-      </div>
+        <div>
+          <button>submit</button>
+        </div>
+      </form>
+      <DevTool control={control} />
     </>
   );
 }

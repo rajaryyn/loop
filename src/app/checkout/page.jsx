@@ -47,9 +47,9 @@ export default function page() {
               <h1 className="text-3xl font-bold text-black ">Shopping Cart</h1>
             </div>
           </div>
-          <div className=" md:flex  md:ml-[20%] md:mr-[20%] md:gap-3 ">
-            <div className="overflow-scroll scroll-smooth scroll-hidden h-96 ">
+          <div className=" lg:flex md:ml-[20%]  md:gap-3 ">
               <div className=" ">
+            <div className="overflow-scroll scroll-smooth scroll-hidden h-96 w-full">
                 {cartItems?.map((product, i) => (
                   <Cartitems key={i} product={product} />
                 ))}

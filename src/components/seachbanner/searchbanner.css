@@ -11,7 +11,7 @@
    background-repeat: no-repeat;
    background-size: 1000px;
    background-position: bottom right;
-   padding: 20px;
+   /* padding: 20px; */
    display: flex;
    align-items: center;
    /* margin-bottom: 60px; */
@@ -46,7 +46,6 @@
  }
  .search-banner-text {
    display: flex;
-   
    width: 500px;
    margin-left: 70px;
    position: absolute;
@@ -123,16 +122,20 @@
      top: -70px;
    }
    .bg {
-     bottom: -10rem;
+    
+     bottom: -5;
+     width: 180px;
+
      
      
      
    }
     .search-banner-text {
-     margin-left: 50px;
+    
      display: flex;
-   top: 35%;
+     top: 34%;
      width: 250px;
+     
    }
  
  }

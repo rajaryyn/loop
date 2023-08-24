@@ -22,7 +22,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.1rem;
 }
 
 .all {
@@ -46,8 +46,8 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-  height: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  height: 20rem;
   overflow-y: scroll;
   /* gap: 2rem; */
   justify-content: space-between;
@@ -112,20 +112,27 @@
 @media(max-width:600px){
 
   .all{
-  font-size: 0.9rem;
-  width: 7rem;
+  font-size: 0.6rem;
+  width: 5rem;
   padding: 0.5em 1em;
     
   }
 
   .products{
     width: 90%;
-    grid-template-columns: 50% auto;
+    grid-template-columns: 26% auto;
+  
   }
 
-  .product{
-    left: 5rem;
+  .list{
+    
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
   }
+
+  /* .product{
+    left: 5rem;
+  } */
 
   .container{
     padding: 0 0rem;

@@ -36,40 +36,40 @@ function Cartitems({ product }) {
 
   return (
     <>
-      <div className="flex items-center justify-between w-full px-5 py-3 border  rounded-md mb-3  shadow-lg ">
+      <div className="flex items-center justify-between w-full md:w-[450px] p-3 border hover:border-blue-500 rounded-md mb-3 relative shadow-lg ">
         <div className="flex gap-3">
           <div className="relative hover:scale-105 bg-gray-100 p-3 rounded-xl transition-all duration-75 ease-in-out items-center shrink-0">
             <Image src={product.img} className="w-16 h-16" alt="img" />
           </div>
-          <div className="font-bold text-lg text-slate-900 lg:text-sm">
+          <div className="font-bold text-lg text-slate-900 ">
             <h3>{product.name}</h3>
             <div className="mt-1 flex">
               <div className="flex"> ₹{product.price * product.quantity}</div>
             </div>
-            <div className="flex">
-              <div className="flex ml-28 sm:ml-36 ">
+            <div className="flex absolute gap-10 top-12 right-8">
+              <div className="flex">
                 <button
                   type="button"
-                  className="w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90"
+                  className="w-6 h-6  flex items-center justify-center active:scale-90"
                   onClick={handleDecCart}
                 >
-                  <MinusIcon className="w-5 h-5 lg:w-4 lg:h-4   stroke-[2]" />
+                  <MinusIcon className="w-5 h-5  stroke-[2]" />
                 </button>
-                <div className="font-medium lg:text-xs w-7 h-6 lg:h-5 lg:w-6 flex items-center justify-center ">
+                <div className="font-medium  w-7 h-6 flex items-center justify-center ">
                   {product.quantity}
                 </div>
                 <button
                   type="button"
-                  className="w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90"
+                  className="w-6 h-6  flex items-center justify-center active:scale-90"
                   onClick={handleIncCart}
                 >
-                  <PlusIcon className="w-5 h-5 lg:w-4 lg:h-4 stroke-[2]" />
+                  <PlusIcon className="w-5 h-5 stroke-[2]" />
                 </button>
               </div>
-              <div className="  ml-4 sm:ml-20">
+              <div className="">
                 <button
                   type="button"
-                  className="cursor-pointer"
+                  className="cursor-pointer hover:text-red-600"
                   onClick={onRemoveItem}
                 >
                   <TrashIcon className="w-5 h-5" />

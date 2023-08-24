@@ -2,8 +2,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import ReduxProvider from "../redux/provider";
 import { Toaster } from "react-hot-toast";
-import { Analytics } from '@vercel/analytics/react';
- 
+import { Analytics } from "@vercel/analytics/react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,14 +14,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="en">
-      <body className={inter.className}>
-        <ReduxProvider>
-          <Toaster position="bottom-center" reverseOrder={false} />
-          {children}
-          <Analytics />
-        </ReduxProvider>
-      </body>
-    </html>
+        <body className={inter.className}>
+          <ReduxProvider>
+            <Toaster position="bottom-center" reverseOrder={false} />
+
+            {children}
+
+            <Analytics />
+          </ReduxProvider>
+        </body>
+      </html>
+  
   );
 }

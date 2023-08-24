@@ -1,23 +1,27 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import {
-  MagnifyingGlassIcon,
-  
-} from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { UserButton } from "@clerk/nextjs";
 
 import { useDispatch, useSelector } from "react-redux";
-import { selectTotalAmount, selectTotalQuantity, setOpenCart } from "@/redux/features/CartSlice";
-import Cart from "../cart/Cart";
+import {
+  selectTotalAmount,
+  selectTotalQuantity,
+  setOpenCart,
+} from "@/redux/features/CartSlice";
 import Link from "next/link";
 
 import CartCard from "../Carttotals/CartCard";
+import { SignInButton } from "@clerk/nextjs";
+import { Button } from "@mui/material";
+import { Avato } from "../usernav/Avato";
+
 export default function Navbar() {
+  
 
   const totalAmount = useSelector(selectTotalAmount);
   const totalQty = useSelector(selectTotalQuantity);
-
-
 
   // navscroll logicccccc starts
   const [navState, setNavState] = useState(false);
@@ -29,7 +33,6 @@ export default function Navbar() {
       setNavState(false);
     }
   };
-
   useEffect(() => {
     window.addEventListener("scroll", onNavScroll);
 
@@ -40,20 +43,8 @@ export default function Navbar() {
 
   // navscroll logicccccc ends
 
-  // reduux starts for cart open function
-  const dispatch = useDispatch();
-
-  const onCarttoggle = () => {
-    dispatch(
-      setOpenCart({
-        cartState: true,
-      })
-    );
-  };
-
   return (
     <>
-      <Cart />
       <header
         className={
           !navState
@@ -66,19 +57,18 @@ export default function Navbar() {
             <Link href="./">
               <Image src="/logo1.png" alt="logo" width={75} height={5} />
             </Link>
-            
           </div>
           <ul className="flex items-center justify-center gap-2">
             <li className="grid items-center">
               <MagnifyingGlassIcon className="icon-style" />
             </li>
-            <li className="grid items-center">
+            <li className="grid ">
               <Link href="/checkout">
-               <CartCard />
-              </Link>{" "}
+                <CartCard />
+              </Link>
             </li>
             <li className="grid items-center">
-              {/* <Avato /> */}
+      
             </li>
           </ul>
         </nav>
