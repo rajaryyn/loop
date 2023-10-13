@@ -1,3 +1,4 @@
+
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-hot-toast";
 
@@ -13,12 +14,6 @@ const CartSlice = createSlice({
   initialState,
   name: "cart",
   reducers: {
-    setOpenCart: (state, action) => {
-      state.cartState = action.payload.cartState;
-    },
-    setCloseCart: (state, action) => {
-      state.cartState = action.payload.cartState;
-    },
     setItemToCart: (state, action) => {
       const existingItem = state.cartItems.find(
         (item) => item.id === action.payload.id

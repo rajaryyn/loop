@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import React from "react";
 import Image from "next/image";
 import "./category.css";
-import { ProductsData } from "../../../data/products.js";
 import { useState } from "react";
 
 import { setItemToCart } from "../../redux/features/CartSlice";

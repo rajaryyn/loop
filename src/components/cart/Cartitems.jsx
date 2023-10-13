@@ -10,7 +10,10 @@ import {
   setClearQty,
 } from "../../redux/features/CartSlice";
 
+
 function Cartitems({ product }) {
+
+ 
   // reduxx
   const dispatch = useDispatch();
 
@@ -38,12 +41,13 @@ function Cartitems({ product }) {
     <>
       <div className="flex items-center justify-between w-full md:w-[450px] p-3 border hover:border-blue-500 rounded-md mb-3 relative shadow-lg ">
         <div className="flex gap-3">
-          <div className="relative hover:scale-105 bg-gray-100 p-3 rounded-xl transition-all duration-75 ease-in-out items-center shrink-0">
-            <Image src={product.img} className="w-16 h-16" alt="img" />
+          <div className="relative hover:scale-105 bg-gray-100 p-3 rounded-xl transition-all duration-75 ease-in-out items-center shrink-0 ">
+            <Image src={product.img} className="w-16 object-center h-16" alt="img" />
           </div>
-          <div className="font-bol text-slate-900 ">
+          <div className="font-bold text-base text-slate-900 ">
             <h3>{product.name}</h3>
-            <div className="mt-1 flex">
+            <div className="mt-3 ml-2 flex gap-6">
+              <h3>{product.quantity}</h3>
               <div className="flex"> ₹{product.price * product.quantity}</div>
             </div>
             <div className="flex absolute gap-10 top-12 right-8">

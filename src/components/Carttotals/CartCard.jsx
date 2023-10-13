@@ -13,9 +13,6 @@ import { useSelector } from "react-redux";
 export default function CartCard() {
   const totalAmount = useSelector(selectTotalAmount);
   const totalQty = useSelector(selectTotalQuantity);
-  
-  const deliverycharge = 25;
-  const total = deliverycharge + totalAmount;
 
   return (
     <div>
