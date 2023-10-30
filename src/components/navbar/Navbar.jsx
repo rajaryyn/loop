@@ -47,11 +47,13 @@ export default function Navbar() {
             </li>
             <li className="flex items-center ">
               <Link href="/checkout">
-                <CartCard />
+              
               </Link>
             </li>
-            <li className="grid items-center">
-    
+            <li className="flex items-center">
+              <Link href="/checkout" >
+    <CartCard />
+              </Link>
             </li>
           </ul>
         </nav>

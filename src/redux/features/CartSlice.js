@@ -1,10 +1,9 @@
-
+"use client"
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-hot-toast";
 
 
 const initialState = {
-  cartState: false,
   cartItems: [],
   cartTotalAmount: 0,
   cartTotalQty: 0,

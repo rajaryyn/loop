@@ -1,7 +1,7 @@
 "use client";
 import Cartempty from "@/components/cart/Cartempty";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectCartItems,
@@ -10,9 +10,6 @@ import {
   setGetTotals,
 } from "@/redux/features/CartSlice";
 import Cartitems from "@/components/cart/Cartitems";
-import Title from "@/components/title/Title";
-import Cartcount from "@/components/cart/Cartcount";
-import Adress from "@/components/adress/Adress";
 import Payment from "@/components/payment/Payment";
 import { Button } from "@/components/ui/Button";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
@@ -20,7 +17,7 @@ import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 export default function page() {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
-  // cart itmes in cart
+  // cart items in cart
 
   const totalAmount = useSelector(selectTotalAmount);
   const totalQty = useSelector(selectTotalQuantity);

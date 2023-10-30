@@ -1,10 +1,8 @@
 import React from "react";
-import CartCard from "../Carttotals/CartCard";
+
 import Paybtn from "./Paybtn";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cross1Icon } from "@radix-ui/react-icons";
-import Adress from "../adress/Adress";
-import Ctotals from "../Carttotals/Ctotals";
 // import { ChevronFirstIcon, ChevronUpIcon } from "lucide-react";
 import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
 
@@ -30,13 +28,13 @@ export default function Payment() {
               </Dialog.Close>
             </div>
 
-            {/* <Adress /> */}
+        
             
           </Dialog.Content>
         </Dialog.Root>
       </div>
       <div className="flex justify-between">
-        <Ctotals />
+        
         <Paybtn />
       </div>
     </div>
