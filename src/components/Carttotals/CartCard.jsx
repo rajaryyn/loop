@@ -3,13 +3,29 @@ import {
   selectTotalAmount,
   selectTotalQuantity,
 } from "@/redux/features/CartSlice";
+
 import { LocalMallTwoTone } from "@mui/icons-material";
-import React from "react";
+import React, {useState,useEffect} from "react";
 import { useSelector } from "react-redux";
 
 export default function CartCard() {
+
+  
+  const [isMounted, setIsMounted] = useState(false);
   const totalAmount = useSelector(selectTotalAmount);
   const totalQty = useSelector(selectTotalQuantity);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+
+
+
+  if (!isMounted) {
+    return null;
+  }
+
 
   return (
     <div className=" flex items-center rounded-3xl bg-blue-600 px-3 py-2">

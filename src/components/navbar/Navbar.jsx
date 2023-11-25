@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
@@ -6,11 +6,11 @@ import Link from "next/link";
 import CartCard from "../Carttotals/CartCard";
 
 export default function Navbar() {
- // navscroll logicccccc starts
+  // navscroll logicccccc starts
   const [navState, setNavState] = useState(false);
 
   const onNavScroll = () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 30) {
       setNavState(true);
     } else {
       setNavState(false);
@@ -47,14 +47,15 @@ export default function Navbar() {
             </li>
             <li className="flex items-center ">
               <Link href="/checkout">
-              
+                <CartCard />
               </Link>
             </li>
-            <li className="flex items-center">
-              <Link href="/checkout" >
-    <CartCard />
-              </Link>
+            <li className="flex items-center ">
+              {/* <Link href="/login">
+              <button>login</button>
+            </Link> */}
             </li>
+            <li></li>
           </ul>
         </nav>
       </header>

@@ -17,16 +17,15 @@ const CartSlice = createSlice({
       const existingItem = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
-
- if (existingItem) {
+    
+      if (existingItem) {
         existingItem.quantity += 1;
         toast.success(`item incresed`);
       } else {
         state.cartItems.push({ ...action.payload, quantity: 1 });
-        toast.success(`${action.payload.name} "added to cart"`);
+        toast.success(`${action.payload.name} Added to cart`);
         
       }
-     
     },
 
     setRemoveItemFromCart: (state, action) => {
@@ -38,13 +37,22 @@ const CartSlice = createSlice({
       toast.success(`${action.payload.name} "removed from cart"`);
     },
     setIncQty: (state, action) => {
-      const existingItem = state.cartItems.find(
+      const existingItemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
-
-      if (existingItem) {
-        existingItem.quantity += 1;
-        toast.success(`"item incresed"`);
+    
+      if (existingItemIndex !== -1) {
+        // If the item already exists in the cart, create a new array with the updated item
+        state.cartItems = state.cartItems.map((item, index) => {
+          if (index === existingItemIndex) {
+            return {
+              ...item,
+              quantity: item.quantity + 1,
+            };
+          }
+          return item;
+        });
+        toast.success(`Item increased`);
       }
 
     },

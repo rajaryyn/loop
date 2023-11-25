@@ -23,9 +23,9 @@ export default function ProductCard({ product, i }) {
   };
 
   return (
-    <div className="w-28 md:w-36 key={product.id} rounded-xl border p-2  shadow-xl space-y-4 ">
-      <div onClick={handleClick} className="space-y-1 ">
-        <div className="bg-slate-100 p-4 rounded-2xl ">
+    <div className="w-28 md:w-36 key={product.id} rounded-xl border p-2  shadow-xl space-y-4  h-44  md:h-52 cursor-pointer">
+      <div onClick={handleClick} className="space-y- ">
+        <div className="bg-slate-00 p-4 rounded-2xl ">
           <Image
             src={product.img}
             alt=""
@@ -33,7 +33,7 @@ export default function ProductCard({ product, i }) {
           />
         </div>
         <div className="">
-          <h3 className="font-bold text-xs md:text-sm leading-2">
+          <h3 className="font-semibold text-xs md:text-sm leading-2">
             {product.name}
           </h3>
         </div>

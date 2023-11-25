@@ -1,13 +1,11 @@
 "use client";
 import { useDispatch } from "react-redux";
 
-import React from "react";
-import Image from "next/image";
+import React from "react";;
 import "./category.css";
 import { useState } from "react";
 
 import { setItemToCart } from "../../redux/features/CartSlice";
-import { useRouter } from "next/navigation";
 import ProductCard from "../productCard/ProductCard";
 
 export default function Category({ pro, heading, list }) {
@@ -46,7 +44,7 @@ export default function Category({ pro, heading, list }) {
           className="list gap-y-4 gap-x-1 scroll-smooth scroll-hidden"
         >
           {MenuProducts.map((product, i) => (
-            <ProductCard product={product} />
+            <ProductCard product={product} key={product.id} />
           ))}
         </div>
       </div>

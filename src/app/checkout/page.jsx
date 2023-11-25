@@ -18,16 +18,24 @@ export default function page() {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
   // cart items in cart
-
+  
+  
   const totalAmount = useSelector(selectTotalAmount);
   const totalQty = useSelector(selectTotalQuantity);
-
+  
   useEffect(() => {
     dispatch(setGetTotals());
   }, [cartItems, dispatch]);
-
+  
   const deliverycharge = 25;
   const total = deliverycharge + totalAmount;
+
+  const itemMessages = cartItems.map(item => `${item.name} (Qty: ${item.quantity}) - ₹${item.price * item.quantity}`);
+const cartSummary = `Hello, I want to order: ${itemMessages.join(', ')}`;
+const msg = encodeURIComponent(`${cartSummary}, total price=₹${total} `);
+
+
+  const href = `https://wa.me/919279377215?text=${msg}`
   return (
     <div>
       {cartItems?.length === 0 ? (
@@ -79,8 +87,20 @@ export default function page() {
                   <h1 className="font-semibold">₹{total}</h1>
                 </div>
               </div>
-              <Payment />
+              <div>
+              <a href={href}>
+
+              <div
+     type="button"
+     className=" flex items-center rounded-full bg-blue-600 px-4 py-2"
+   >
+     <span className=" tet-sm font-medium text-white">Order from Whatsapp</span>
+
+   </div> </a>
+              </div>
+              {/* <Payment /> */}
             </div>
+            
           </div>
         </>
       )}

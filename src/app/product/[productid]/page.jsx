@@ -15,11 +15,16 @@ export default function Page({ params }) {
     return <div>Product not found</div>;
   }
 
+  const msg = encodeURIComponent(
+    `Hello, i want order of ${product.name}, price=${product.price}`
+  );
+  const href = `https://wa.me/919279377215?text=${msg}`;
+
   return (
     <div className="mx-auto max-w-7xl">
       <div className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2  mt-9">
-          <div className="relative p-3 rounded-xl w-full md:w-[28rem] flex items-center shrink-0 border h-96  ">
+          <div className="relative p-3 rounded-xl w-full md:w-[28rem] flex items-center shrink-0  h-96  ">
             <Image
               src={product.img}
               className=" w-96 object-center h-80"
@@ -29,6 +34,9 @@ export default function Page({ params }) {
           <div>
             <h1>{product.name}</h1>
             <h1>{product.price}</h1>
+            <a href={href}>
+              <h1>order from whatsap</h1>
+            </a>
           </div>
         </div>
       </div>
